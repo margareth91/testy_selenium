@@ -4,7 +4,9 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 # arrange
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+# driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+service = ChromeService(ChromeDriverManager().install())
+driver = webdriver.Chrome()
 
 driver.get('https://testuj.pl')
 # driver.get('https://google.pl')
